@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Literata:opsz,wght@7..72,200&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #eeeeee;
+}
+
+h2 {
+	color: #fff;
+	font-family: "Abril Fatface", serif;
+	font-size: 3rem;
+	text-shadow: 3px 1px 0px midnightblue;
+}
+
+p {
+	color: #fff;
+	font-family: "Literata", serif;
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 0px black;
+}
+.header {
+	width: 100%;
+	padding: 20px 100px;
+	background-color: #47a992;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-list {
+	display: flex;
+	list-style: none;
+	gap: 1rem;
+}
+.logo {
+	font-size: 32px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.abrir-menu,
+.cerrar-menu {
+	display: none;
+}
+
+.navbar a {
+	position: relative;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+.navbar a::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition: 0.3s;
+}
+
+.navbar a:hover::before {
+	width: 100%;
+}
+
+.midle-content {
+	margin-top: 80px;
+}
+.midle-content h2,
+p {
+	position: relative;
+	top: 30%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.midle-content h2:hover,
+p:hover {
+	transform: scale(1.3);
+	transition: 0.3s;
+}
+.grano {
+	background-image: url("img/granos.jpeg");
+	background-size: cover;
+	background-position: center;
+
+	text-align: center;
+	height: 300px;
+	margin: 30px 30px;
+}
+
+.cafeteras {
+	background-image: url("img/cafetera.jpeg");
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	height: 300px;
+	margin: 30px 30px;
+}
+
+.tazas {
+	background-image: url("img/tazas.jpeg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	text-align: center;
+	height: 300px;
+	margin: 30px 30px;
+}
+
+.footer {
+	background-color: #47a992;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+}
+
+.footer a {
+	position: relative;
+	top: 30px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	margin: 10px 30px;
+}
+
+.footer p {
+	font-size: 1rem;
+	color: #fff;
+	text-shadow: none;
+	text-align: center;
+	padding-top: 2px;
+}
+
+@media screen and (max-width: 1000px) {
+	.abrir-menu,
+	.cerrar-menu {
+		display: block;
+		border: 0;
+		font-size: 1.25rem;
+		background-color: transparent;
+		color: #eeeeee;
+		cursor: pointer;
+	}
+	.navbar {
+		opacity: 0;
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		gap: 1rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #47a992;
+		padding: 2rem;
+		box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+		z-index: 1;
+	}
+
+	.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.nav-list {
+		flex-direction: column;
+		align-items: end;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	.midle-content h2,
+	p {
+		position: relative;
+		left: 30px;
+		top: 30px;
+		width: 350px;
+		text-align: center;
+		transition: 0.3s;
+	}
+	.midle-content h2:hover,
+	p:hover {
+		transform: scale(1.2);
+		transition: 0.3s;
+	}
+
+	.footer p {
+		position: relative;
+		left: 15%;
+		font-size: 1rem;
+		color: #fff;
+		text-shadow: none;
+		text-align: center;
+		padding-top: 2px;
+	}
+}
